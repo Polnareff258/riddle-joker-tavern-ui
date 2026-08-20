@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "default": {},
+  "type": "object",
+  "properties": {
+    "世界": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "当前日期": {
+          "default": "2026/09/01",
+          "type": "string"
+        },
+        "当前时段": {
+          "default": "上午",
+          "type": "string",
+          "enum": [
+            "清晨",
+            "上午",
+            "中午",
+            "下午",
+            "傍晚",
+            "夜间"
+          ]
+        },
+        "当前地点": {
+          "default": "橘花学院校门",
+          "type": "string"
+        },
+        "已触发事件": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "玩家": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "身份": {
+          "default": "转学生",
+          "type": "string"
+        },
+        "与主角关系": {
+          "default": 10,
+          "type": "number"
+        },
+        "与女主关系": {
+          "default": {
+            "绫濑": 10,
+            "七海": 10,
+            "茉优": 0,
+            "羽月": 10,
+            "千咲": 0
+          },
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "enum": [
+              "绫濑",
+              "七海",
+              "茉优",
+              "羽月",
+              "千咲"
+            ]
+          },
+          "additionalProperties": {
+            "default": 0,
+            "type": "number"
+          },
+          "required": [
+            "绫濑",
+            "七海",
+            "茉优",
+            "羽月",
+            "千咲"
+          ]
+        }
+      }
+    },
+    "在原晓": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "潜伏任务进度": {
+          "default": "转入学院",
+          "type": "string",
+          "enum": [
+            "转入学院",
+            "日常潜伏",
+            "伪钞调查",
+            "失踪案调查",
+            "身份危急",
+            "任务终结"
+          ]
+        },
+        "身份暴露": {
+          "default": {
+            "绫濑": false,
+            "七海": false,
+            "茉优": false,
+            "羽月": false,
+            "千咲": false,
+            "恭平": false
+          },
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "enum": [
+              "绫濑",
+              "七海",
+              "茉优",
+              "羽月",
+              "千咲",
+              "恭平"
+            ]
+          },
+          "additionalProperties": {
+            "default": false,
+            "type": "boolean"
+          },
+          "required": [
+            "绫濑",
+            "七海",
+            "茉优",
+            "羽月",
+            "千咲",
+            "恭平"
+          ]
+        },
+        "绫濑秘密知情": {
+          "default": false,
+          "type": "boolean"
+        }
+      }
+    },
+    "路线": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "当前": {
+          "default": "共通线",
+          "type": "string",
+          "enum": [
+            "共通线",
+            "绫濑线",
+            "七海线",
+            "茉优线",
+            "羽月线",
+            "千咲线",
+            "自由探索"
+          ]
+        }
+      }
+    }
+  }
+}
