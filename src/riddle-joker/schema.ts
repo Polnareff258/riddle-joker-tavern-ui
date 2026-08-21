@@ -4,6 +4,10 @@ export const Schema = z.object({
     当前时段: z.enum(['清晨', '上午', '中午', '下午', '傍晚', '夜间']).prefault('上午'),
     当前地点: z.string().prefault('橘花学院校门'),
     已触发事件: z.array(z.string()).prefault([]),
+    当前世界背景: z.string().prefault('星幽术现代都市·鹫逗研究都市'),
+    本世界身份: z.string().prefault('转学生（降临者）'),
+    关系摘要: z.string().prefault('转学日初识在原晓与七海，尚无深交'),
+    当前携带技能: z.array(z.string()).prefault([]),
   }).prefault({}),
   玩家: z.object({
     身份: z.string().prefault('转学生'),

@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* 功能语义色彩变量 —— 与状态栏一致：温馨日常（明线）+ 悬疑暗流（暗线） */
+  --c-primary: #e59ba6; /* 樱花粉：校园日常线的温度 */
+  --c-accent: #d45b6a; /* 心跳玫瑰红：关系度 / 好感 / 重要提醒 */
+  --c-ink: #3e5c8a; /* 深蓝夜色：星幽术暗流 / 组织密报 */
+  --c-surface: #fbf7f2; /* 暖白：清晨教室的光照在白色校服上 */
+  --c-text: #3a3a44; /* 墨色正文 */
+  --c-text-muted: #9aa0a6; /* 雾灰：晨雾中远景建筑的轮廓 */
+  --c-border: #e6ddd3; /* 玻璃窗框的淡淡反光 */
+
+  --font-ui: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif;
+}
+
+body {
+  font-family: var(--font-ui);
+}
