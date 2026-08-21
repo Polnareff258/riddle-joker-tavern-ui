@@ -33,6 +33,25 @@
           "items": {
             "type": "string"
           }
+        },
+        "当前世界背景": {
+          "default": "星幽术现代都市·鹫逗研究都市",
+          "type": "string"
+        },
+        "本世界身份": {
+          "default": "转学生（降临者）",
+          "type": "string"
+        },
+        "关系摘要": {
+          "default": "转学日初识在原晓与七海，尚无深交",
+          "type": "string"
+        },
+        "当前携带技能": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
